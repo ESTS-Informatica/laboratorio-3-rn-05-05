@@ -37,4 +37,26 @@ public class GroundTransportation extends Transport
     public String getLicensePlate(){
         return licensePlate;
     }
+    
+    /**
+     * Método com Override que retorna o preço do transporte com a taxa de honorários cobrados
+     * 
+     * @return preço com honorários
+     * 
+     */
+    @Override
+    public double getPriceWithFees(){
+        return super.getPrice() * (1.0 + (3 * 0.01));
+    }
+    
+    /**
+     * Método que devolve a descrição do tipo de trasnporte
+     * 
+     * @return tipo de trasnporte em string
+     * 
+     */
+    @Override
+    public String getTransportType(){
+        return "Transporte Terrestre";
+    }
 }
