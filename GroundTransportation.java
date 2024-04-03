@@ -12,8 +12,29 @@ public class GroundTransportation extends Transport
     /**
      * Construtor para objetos da classe GroundTransportation
      */
-    public GroundTransportation()
+    public GroundTransportation(String licensePlate)
     {
-        
+        this.licensePlate = licensePlate; //inicialização do atríbuto
+    }
+    
+    /**
+     * Método modificador para definir a matrícula
+     * 
+     * @param matricula
+     * 
+     */
+    public void setLicensePlate(String licensePlate){
+        this.licensePlate = licensePlate;
+    }
+    
+    
+    /**
+     * Método seletor para retornar a matrícula
+     * 
+     * @return matricula
+     * 
+     */
+    public String getLicensePlate(){
+        return licensePlate;
     }
 }
